@@ -18,7 +18,7 @@
 <section class="login">
 <div class="container">
 <h2 class="login-title">Вход</h2>
-<form action="" class="signin-form" method="post">
+<form action="/sourse/authorize.php" class="signin-form" method="post">
     <table>
         <tr>
             <td class="title">
@@ -38,7 +38,7 @@
         </tr>
         <tr>
             <td class="field">
-                <input type="submit" class="btn" value="Войти">
+                <input type="submit" class="btn" value="Войти" name="login">
             </td>
             <td class="field">
                 <input type="submit" class="btn" value="Зарегистрироваться">
@@ -48,6 +48,8 @@
 </form>
 </div>
 </section>
+
+
 
 </body>
 </html>
