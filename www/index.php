@@ -48,8 +48,6 @@
 </form>
 </div>
 </section>
-<footer class="main-footer">
 
-</footer>
 </body>
 </html>
