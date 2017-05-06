@@ -49,7 +49,7 @@
 </div>
 </section>
 <footer class="main-footer">
-wadwd
+
 </footer>
 </body>
 </html>
