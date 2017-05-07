@@ -30,6 +30,4 @@ if (!empty($_POST['login'])&&!empty($_POST['user_name'])&&!empty($_POST['user_su
                 {
                     echo "Такой пользователь уже существует!";  
                 }
-
-
 }
