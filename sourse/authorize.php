@@ -4,7 +4,7 @@ session_start();
 
 $SERVER_ROOT = "http://english-testing.ru";
 
-if(preg_match("@$SERVER_ROOT@",$_SERVER["HTTP_REFERER"])) {
+if(preg_match("@$SERVER_ROOT@",$_SERVER["HTTP_REFERER"])) { //проверяем, откула было перенаправление
     if (!empty($_POST['login'])) {
 
         try { 
@@ -35,12 +35,10 @@ if(preg_match("@$SERVER_ROOT@",$_SERVER["HTTP_REFERER"])) {
             exit;
         }
     }
-    elseif(!empty($_POST['register'])) {
+    elseif(!empty($_POST['register'])) { //если нажата кнопка регистрации
         header("Location: register.php");
         exit;
      }
-   
-
     if ($_POST['logout']) session_destroy();
 }
 
