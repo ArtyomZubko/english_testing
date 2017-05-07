@@ -18,7 +18,7 @@
 <section class="login">
 <div class="container">
 <h2 class="login-title">Вход</h2>
-<form action="" class="signin-form" method="post">
+<form action="/sourse/authorize.php" class="signin-form" method="post">
     <table>
         <tr>
             <td class="title">
@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <td class="title">
-                <label for="password">Пароль:</label>
+                <label for="password-field">Пароль:</label>
             </td>
             <td class="field">
                 <input type="password" id="password-field" name="password-field" placeholder="Введите пароль">
@@ -38,15 +38,18 @@
         </tr>
         <tr>
             <td class="field">
-                <input type="submit" class="btn" value="Войти">
+                <input type="submit" class="btn" value="Войти" name="login">
             </td>
             <td class="field">
-                <input type="submit" class="btn" value="Зарегистрироваться">
+                <input type="submit" class="btn" value="Зарегистрироваться" name="register">
             </td>
         </tr>
     </table>
 </form>
 </div>
 </section>
+
+
+
 </body>
 </html>
