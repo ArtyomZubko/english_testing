@@ -1,8 +1,9 @@
 <?php
+include("defines.php");
 if (!empty($_POST['login'])&&!empty($_POST['user_name'])&&!empty($_POST['user_surname'])&&!empty($_POST['password-field'])
     &&($_POST['password-field']==$_POST['password_repeat'])) {
     try { 
-            $db = new PDO("mysql:host=localhost;dbname=english_testing", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'")); 
+            $db = new PDO("mysql:host=localhost;dbname=$dbname", "$dblogin", "$dbpass", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'")); 
         } 
             catch(PDOException $e) 
                 { 

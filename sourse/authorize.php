@@ -1,6 +1,7 @@
 <?php
 // открываем сессию
 session_start();
+include("defines.php");
 
 $SERVER_ROOT = "http://english-testing.ru";
 
@@ -8,7 +9,7 @@ if(preg_match("@$SERVER_ROOT@",$_SERVER["HTTP_REFERER"])) { //проверяем
     if (!empty($_POST['login'])) {
 
         try { 
-            $db = new PDO("mysql:host=localhost;dbname=english_testing", "root", "", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'")); 
+            $db = new PDO("mysql:host=localhost;dbname=$dbname", "$dblogin", "$dbpass", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'")); 
         } 
             catch(PDOException $e) 
                 { 
