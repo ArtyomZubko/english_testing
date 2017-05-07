@@ -1,21 +1,14 @@
 <?php
 // открываем сессию
 session_start();
-include("defines.php");
+
 
 $SERVER_ROOT = "http://english-testing.ru";
 
 if(preg_match("@$SERVER_ROOT@",$_SERVER["HTTP_REFERER"])) { //проверяем, откула было перенаправление
     if (!empty($_POST['login'])) {
 
-        try { 
-            $db = new PDO("mysql:host=localhost;dbname=$dbname", "$dblogin", "$dbpass", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'")); 
-        } 
-            catch(PDOException $e) 
-                { 
-                    echo $e->getMessage();
-                    die("Ошибка подключения."); 
-                }
+        include("db_connection.php");
                 
         $passwd = $_POST['password-field'];
         $login = $_POST['login-field'];     

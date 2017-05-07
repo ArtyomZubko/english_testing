@@ -1,15 +1,7 @@
 <?php
-include("defines.php");
 if (!empty($_POST['login'])&&!empty($_POST['user_name'])&&!empty($_POST['user_surname'])&&!empty($_POST['password-field'])
     &&($_POST['password-field']==$_POST['password_repeat'])) {
-    try { 
-            $db = new PDO("mysql:host=localhost;dbname=$dbname", "$dblogin", "$dbpass", array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'")); 
-        } 
-            catch(PDOException $e) 
-                { 
-                    echo $e->getMessage();
-                    die("Ошибка подключения."); 
-                }
+     include("db_connection.php");
                 $login=$_POST['login'];
                 $password=crypt($_POST['password-field']);
                 $name=$_POST['user_name'];
