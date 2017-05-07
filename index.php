@@ -30,7 +30,7 @@
         </tr>
         <tr>
             <td class="title">
-                <label for="password">Пароль:</label>
+                <label for="password-field">Пароль:</label>
             </td>
             <td class="field">
                 <input type="password" id="password-field" name="password-field" placeholder="Введите пароль">
@@ -41,7 +41,7 @@
                 <input type="submit" class="btn" value="Войти" name="login">
             </td>
             <td class="field">
-                <input type="submit" class="btn" value="Зарегистрироваться">
+                <input type="submit" class="btn" value="Зарегистрироваться" name="register">
             </td>
         </tr>
     </table>
